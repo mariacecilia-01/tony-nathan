@@ -61,6 +61,10 @@ header li:hover {
     box-shadow: var(--default-shadow);
 }
 
+.logo-mobile{
+    display: none;
+}
+
 .login {
     height: 48px;
     width: 120px;
@@ -81,7 +85,7 @@ section {
 
 .home {
     background-color: var(--secundary-color);
-    background-image: url(./img/background-home.svg);
+    background-image: url(./img/backgrond-home.svg);
     background-repeat: no-repeat;
     background-position: top right;
     background-size: contain;
@@ -446,4 +450,50 @@ footer {
     .copy-right {
         margin-bottom: 68px;
     }
+
+@media (max-width: 765px){
+    .home{
+        background-color: var(--primary-color);
+        background-image: url(./img/background-mobile.png);
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .logo-desk{
+        display: none;
+    }
+    .logo-mobile{
+        display: flex;
+    }
+
+
+    .home .container-slogan h2{
+        color: white;
+    }
+    .home .container-slogan span{
+        background-color: white;
+    }
+    .home .container-slogan img {
+        display: none;
+    }
+    .container-slogan .slogan {
+        font-size: 40px;
+        position: absolute;
+        padding-right: 76px;
+        left: 10px;
+        bottom: 100px;
+    }
+
+
+
+    .pizza :nth-child(2){
+        display: none;
+    }
+
+    .servico-item p{
+        display: none;
+    }
+
+}
 }
