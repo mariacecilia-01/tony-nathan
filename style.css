@@ -20,6 +20,10 @@ ul, ol, li {
     list-style: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
    
    font-family: "Poppins", sans-serif;
@@ -36,6 +40,7 @@ header {
     align-items: center;
     padding: var(--default-padding);
     z-index: 2;
+    background-color: #fff5;
 }
 
 header menu {
@@ -356,4 +361,89 @@ footer {
     display: grid;
     place-content: center;
     border-top: 2px solid var(--secundary-color);
+}
+
+@media (max-width: 1024px){
+    header{
+        position: absolute;
+        left: 0;
+        top: 64px;
+        background-color: transparent;
+    }
+    header menu {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 64px;
+        background-color: var(--primary-color);
+        color: white;
+        justify-content: space-evenly;
+    }
+    header li:hover {
+        color: var(--primary-color);
+    }
+    .home{
+        grid-template-rows: none;
+    }
+
+    .home .container-produtos{
+        display: none;
+    }
+    .container-slogan {
+        flex-direction: column-reverse;
+        gap: 128px;
+        align-items: center;
+    }
+    .container-slogan .slogan{
+        width: 100%;
+    }
+
+    .cardapio-item{
+        border: none;
+    }
+
+    .container-produtos{
+        gap: 32px;
+    }
+
+    .pizza{
+        width: 100%;
+    }
+    .pizza:nth-child(3),
+    .pizza:nth-child(4),
+    .pizza:nth-child(5) {
+        display: none;
+    }
+
+    .servicos-container{
+        flex-direction: column;
+        gap: 32px;
+    }
+    .servico-item{
+        height: 260px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .servico-item p{
+        width: 330px;
+    }
+
+    .contatos-container{
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 400px;
+        justify-content: center;
+        align-items: center;
+    }
+    .contato {
+        padding: 0;
+    }
+    .contato:nth-child(2){
+        display: none;
+    }
+    
+    .copy-right {
+        margin-bottom: 68px;
+    }
 }
